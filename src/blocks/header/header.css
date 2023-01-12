@@ -1,17 +1,14 @@
 .header {
   border-bottom: 1px solid rgba(84, 84, 84, .7);
-  padding-top: 45px;
   margin: 0 auto;
-  max-width: 880px;
-  min-height: 74px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 }
 
 @media all and (min-width: 720px) and (max-width: 1024px)  {
   .header {
-    max-width: 660px;
+    max-width: 900px;
     min-height: 62px;
   }
 }

@@ -18,49 +18,26 @@ function Header( {isLoggedIn, userEmail, onSignOut} ) {
   return (
     <header className={!isOpenMenu ? 'header' : 'header header__menu'}>
       <div className="header__container">
-        <img className="header__logo" src={headerLogo} alt="Лого" /> 
-        <button 
-          className={`${!isOpenMenu ? 'header__menu-button' : `header__menu-button header__menu-button_close`}
-          ${!isLoggedIn && 'header__menu-button_signedout'}`}
-          //onClick={showMenu}
-        >
-        </button>
+        <Link to="/">
+          <img className="header__logo" src={ headerLogo } alt="Лого" /> 
+        </Link>
       </div>
       <Switch>
-        <Route path="/sign-in">
-          <div className={`${!isLoggedIn && 'header__link header__link_hover'}`}>
-            <nav>
-              <Link
-                className='header__link'
-                to="/sign-up"
-              >
-                Регистрация
+        <Route path="/">
+            <nav className="header__nav__container">
+              <Link className="header__nav__links" to="/">
+                Главная
+              </Link>
+              <Link className="header__nav__links" to="/about-us">
+                О нас
+              </Link>
+              <Link className="header__nav__links" to="/shop">
+                Магазин
+              </Link>
+              <Link className="header__nav__links" to="/contacts">
+                Контакты
               </Link>
             </nav>
-          </div>
-        </Route>
-        <Route path="/sign-up">
-          <div className={`${!isLoggedIn && 'header__link header__link_hover'}`}>
-            <nav>
-              <Link
-                className='header__link'
-                to="/sign-in"
-              >
-                Войти
-              </Link>
-            </nav>
-          </div>
-        </Route>
-        <Route exact path="/">
-          <div className={!isOpenMenu ? 'header__signedIn-details' : 'header__signedIn-details header__signedIn-details_show'}>
-            <p className='header__email'>{userEmail}</p>
-            <button
-              className='header__sign-out-button'
-             // onClick={signOut}
-            >
-              Выйти
-            </button>
-          </div>
         </Route>
       </Switch>
     </header>

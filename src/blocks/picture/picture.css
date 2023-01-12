@@ -1,0 +1,9 @@
+.pictures__block {
+  margin: 10px auto;
+  max-width: 900px;
+}
+
+.pictures__image {
+  width: 100%;
+  display: block;
+}

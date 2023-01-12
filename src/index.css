@@ -15,3 +15,6 @@
 @import url(./blocks/header/__signedIn-details/_show/header__signedIn-details_show.css);
 @import url(./blocks/header/__email/header__email.css);
 @import url(./blocks/header/__sign-out-button/header__sign-out-button.css);
+@import url(./blocks/header/__nav__container/header__nav__container.css);
+@import url(./blocks/header/__nav__links/header__nav__links.css);
+@import url(./blocks/picture/picture.css);
